@@ -10,8 +10,12 @@ START:                  ; first instruction of program
     LEA MESSAGE, A1
     MOVE.B #14, D0
     TRAP #15
+    
+    MOVE.B #4, D0
+    TRAP #15
+    
     SIMHALT             ; halt simulator
-MESSAGE DC.B 'Enter points' ,0
+MESSAGE DC.B 'Enter points:' ,0
     
     END    START        ; last line of source
 
